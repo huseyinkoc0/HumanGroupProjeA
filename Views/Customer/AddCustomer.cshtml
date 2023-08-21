@@ -1,0 +1,66 @@
+﻿@model HumanGroupProjeA.Models.Entity.Customer
+@{
+    ViewBag.Title = "AddCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+div{
+    margin-top:20px;
+}
+</style>
+
+<h2>AddCustomer</h2>
+
+<form class="form" method="post">
+
+    <div>
+        <label>
+            Name
+        </label>
+        <input type="text" class="form-control" name="Name" placeholder="Name" />
+    </div>
+    <div>
+        <label>
+            Surname
+        </label>
+        <input type="text" class="form-control" name="Surname" placeholder="Surname" />
+    </div>
+    <div>
+        <label>
+            Mail
+        </label>
+        <input type="text" class="form-control" name="Mail" placeholder="Email" />
+    </div>
+    <div>
+        <label>
+            Phone Number
+        </label>
+        <input type="text" class="form-control" name="PhoneNumber" placeholder="Phone Number" maxlength="10" />
+    </div>
+    <div>
+        <label style="font-style:italic">
+            TC Number
+        </label>
+        <div><input type="text" class="form-control" name="Tc" placeholder="TC" maxlength="11" /></div>
+    </div>
+    <div>
+        <label style="margin-bottom:10px">Gender</label>
+        <br />
+        <input type="radio" class="form-check-input" name="Gender" id="erkek" value="Erkek" />
+        <label for="erkek">Erkek</label>
+        <input type="radio" class="form-check-input" name="Gender" id="kadin" value="Kadın" />
+        <label for="kadin">Kadın</label>
+    </div>
+    <div>
+        <label for="edu"> Education </label>
+        <select name="Education" id="education">
+            <option value="Lisans">Lisans</option>
+            <option value="Ön Lisans">Ön Lisans</option>
+            <option value="Lise">Lise</option>
+            <option value="Ortaokul">Ortaokul</option>
+        </select>
+    </div>
+    <div style="margin-top:10px">
+        <button class="btn btn-info" id="btn">Add</button>
+    </div>
+</form>

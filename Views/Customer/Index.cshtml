@@ -1,0 +1,41 @@
+﻿@using HumanGroupProjeA.Models.Entity
+@model List<Customer>
+@{
+    ViewBag.Title = "Customer Service";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Mail</th>
+        <th>PhoneNumber</th>
+        <th>TC</th>
+        <th>Gender</th>
+        <th>Education</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+    </tr>
+    @foreach(var x in Model) { 
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.Name</td>
+        <td>@x.Surname</td>
+        <td>@x.Mail</td>
+        <td>@x.PhoneNumber</td>
+        <td>@x.Tc</td>
+        <td>@x.Gender</td>
+        <td>@x.Education</td>
+        <td><a href="/Customer/CustomerDelete/@x.ID" class="btn btn-danger">Delete</a></td>
+        <td><a href="/Customer/CustomerEdit/@x.ID" class="btn btn-success">Update</a></td>
+
+    </tr>
+    }
+    
+</table>
+<a href="/Customer/AddCustomer" class="btn btn-secondary">Add New Customer</a>
